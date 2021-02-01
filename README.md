@@ -1,18 +1,17 @@
 # Yunik's Portfolio Version 2
+Please look around and if you like my skill set, please contact me! :)
 
-I have created this website to improve my new language SASS skill. 
-For now, I haven't put any javascript, but later on I will add JS to add more animation effects onto this page.
-
-Also, due to completing this site within 2 days, I haven't worked on media-queries yet.
 
 ## Screenshot
-![](/assets/images/capture.jpg)
+![](/assets/images/port-shot.jpg)
 
 ## Built With
 * HTML
 * SASS
+* Javascript
 
-Deployed Application: https://yuniksung.github.io/portfolio_v2/.
+
+Deployed Application: https://yuniksung.github.io/yuniksportfolio/
 
 ---
 ## Contribution
