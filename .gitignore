@@ -1,0 +1,4 @@
+styles/.sass-cache
+styles/.sass-cache/*
+.vscode
+.DS_Store

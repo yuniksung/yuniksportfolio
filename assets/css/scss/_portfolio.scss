@@ -1,0 +1,462 @@
+:root{
+    --workBorder: gray;
+}
+
+
+
+.portfolio-wrapper{
+    margin: 0 auto;
+    padding: 100px 0px;
+    width: 80%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    @include breakpoint(third-big){
+        width: 80%;
+    }
+
+    .my-work{
+        color: rgb(0, 0, 100);
+        font-size: $bodyH2;
+        font-weight: 700;
+        margin-bottom: 50px;
+        @include breakpoint(third-big){
+            margin-bottom: 15px;
+        }
+
+        &:after{
+            content: "";
+            display: block;
+            position: relative;
+            top: -17px;
+            width: 300px;
+            height: 1px;
+            margin-left: 111px;
+            background-color: var(--workBorder);
+        }
+        
+    }
+
+    // first and third portfolio
+    .left-work{
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: 1fr;
+        -webkit-box-align: center;
+        align-items: center;
+        height: 400px;
+        overflow: hidden;
+        margin-bottom: 80px;
+        padding-bottom: 20px;
+            @include breakpoint(third-big){
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(2, 1fr);
+                height: auto;
+            }
+
+        
+
+        // left portfolio image
+        .first-img{
+            grid-column: 1/8;
+            grid-row: 1/2;
+            width: 100%;
+            height: 100%;
+            background: url(../images/portfolio/profileGen.jpg);
+            background-size: cover;
+            position: relative;
+            box-shadow: 4px 4px 8px $portfolio-textBox;
+
+            @include breakpoint(third-big){
+                grid-column: 1/3;
+                grid-row: 1/3;
+                opacity: 0.5;
+            }
+        }
+
+        .third-img{
+            grid-column: 1/8;
+            grid-row: 1/2;
+            width: 100%;
+            height: 100%;
+            background: url(../images/portfolio/mealQ.jpg);
+            background-size: cover;
+            position: relative;
+            box-shadow: 4px 4px 8px $portfolio-textBox;
+
+            @include breakpoint(third-big){
+                grid-column: 1/3;
+                grid-row: 1/3;
+                opacity: 0.5;
+            }
+        }
+
+        .left-content {
+            grid-column: 7 /  13;
+            grid-row: 1/2;
+            text-align: right;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-end;
+            margin-top: 100px;
+
+            @include breakpoint(third-big){
+                background-color: #424242;
+                background-image: linear-gradient(to left, #070707, transparent);
+                opacity: 0.9;
+                z-index: 6;
+                padding: 20px;
+                position: relative;
+                box-shadow: 4px 4px 8px #424242;
+                margin-top: 0;
+                grid-column: 1/3;
+                grid-row: 1/3;
+            }
+
+            .portfolio-title{
+                text-align: right;
+                padding-bottom: 20px;
+
+                @include breakpoint(third-big){
+                    text-align: center;
+                    padding-bottom: 2;
+                }
+                p{
+                    font-size: $bodyH2;
+                    @include breakpoint(third-big){
+                        font-size: $bodyH2-mq2;
+                        color: rgb(133, 133, 133);
+                        font-weight: 700;
+                        border-bottom: 1px solid rgb(235, 235, 235);
+                        padding-bottom: 2;
+                    }
+                };
+            }
+
+            .left-description{
+                background-color: $portfolio-textBox;
+                z-index: 6;
+                padding: 20px;
+                position: relative;
+                box-shadow: 4px 4px 8px $portfolio-textBox;
+
+                @include breakpoint(third-big){
+                    box-shadow: 4px 4px 8px rgba(66, 66, 66, 0);
+                    background-color: rgba(66, 66, 66,0);
+                    text-align: right;
+                    padding: 0;
+                }
+                p{
+                    color: #fff;
+                    text-align: right;
+
+                    @include breakpoint(third-big){
+                        color: rgb(179, 179, 179);
+                        font-size: $bodyP;
+                    }
+                    
+                }
+            }
+
+            .portfolio-list{
+                display: flex;
+                padding: 20px 0;
+                li{
+                    margin-left: 20px;
+                    list-style: none;
+                    font-size: 20px;
+                    padding: 20px auto auto 10px;
+
+                    @include breakpoint(third-big){
+                        font-size: 14px;
+                        color: rgb(145, 145, 145);
+                        padding: 12px auto auto 6px;
+                    }
+                }
+            }
+
+            .left-links{
+                a {
+                    margin: 20px;
+                    color: rgb(56, 56, 56);
+                    font-size: 30px;
+                    text-decoration: none;
+
+                    @include breakpoint(third-big){
+                        margin: 10px;
+                        color: rgb(145, 145, 145);
+                    }
+
+                    &:hover{
+                        color: rgb(82, 82, 82);
+                    }
+                }
+            }
+        }
+
+
+    }
+
+    // Second portfolio
+    .right-work{
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: 1fr;
+        -webkit-box-align: center;
+        align-items: center;
+        height: 400px;
+        overflow: hidden;
+        margin-bottom: 80px;
+        padding-bottom: 20px;
+        @include breakpoint(third-big){
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            height: auto;
+        }
+
+        // left portfolio image
+        .right-img{
+            grid-column:  6/13;
+            grid-row: 1/2;
+            width: 100%;
+            height: 100%;
+            background: url(../images/portfolio/denver.jpg);
+            background-size: cover;
+            position: relative;
+            box-shadow: -4px 4px 8px $portfolio-textBox;
+
+            @include breakpoint(third-big){
+                grid-column: 1/3;
+                grid-row: 1/3;
+                opacity: 0.5;
+            }
+        }
+
+        .fourth-img{
+            grid-column:  6/13;
+            grid-row: 1/2;
+            width: 100%;
+            height: 100%;
+            background: url(../images/portfolio/musicline1.jpg);
+            background-size: cover;
+            position: relative;
+            box-shadow: -4px 4px 8px $portfolio-textBox;
+
+            @include breakpoint(third-big){
+                grid-column: 1/3;
+                grid-row: 1/3;
+                opacity: 0.5;
+            }
+        }
+
+        .right-content {
+            grid-column: 1/8;
+            grid-row: 1/2;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            margin-top: 100px;
+
+            @include breakpoint(third-big){
+                background-color: #424242;
+                background-image: linear-gradient(to left, #070707, transparent);
+                opacity: 0.9;
+                z-index: 6;
+                padding: 20px;
+                position: relative;
+                box-shadow: 4px 4px 8px #424242;
+                margin-top: 0;
+                grid-column: 1/3;
+                grid-row: 1/3;
+            }
+            
+
+            .portfolio-title{
+                text-align: left;
+                padding-bottom: 20px;
+
+                @include breakpoint(third-big){
+                    text-align: center;
+                    padding-bottom: 2;
+                }
+                p{
+                    font-size: $bodyH2;
+                    @include breakpoint(third-big){
+                        font-size: $bodyH2-mq2;
+                        color: rgb(133, 133, 133);
+                        font-weight: 700;
+                        border-bottom: 1px solid rgb(235, 235, 235);
+                        padding-bottom: 2;
+                    }
+                };
+
+                
+            }
+
+            .right-description{
+                background-color: $portfolio-textBox;
+                z-index: 6;
+                padding: 20px;
+                position: relative;
+                box-shadow: -4px 4px 8px $portfolio-textBox;
+                @include breakpoint(third-big){
+                    box-shadow: 4px 4px 8px rgba(66, 66, 66, 0);
+                    background-color: rgba(66, 66, 66,0);
+                    text-align: right;
+                    padding: 0;
+                }
+
+                
+
+                p{
+                    color: #fff;
+                    text-align: left;
+                    @include breakpoint(third-big){
+                        color: rgb(179, 179, 179);
+                        font-size: $bodyP;
+                    }
+                }
+            }
+
+            .portfolio-list{
+                display: flex;
+                padding: 20px 0;
+
+                li{
+                    margin-right: 20px;
+                    list-style: none;
+                    font-size: 20px;
+                    padding: 20px auto auto 10px;
+                    z-index: 2;
+                    @include breakpoint(third-big){
+                        font-size: 14px;
+                        color: rgb(145, 145, 145);
+                        padding: 12px auto auto 6px;
+                    }
+                }
+            }
+
+            .right-links{
+                a {
+                    margin: 20px;
+                    color: rgb(56, 56, 56);
+                    font-size: 30px;
+                    text-decoration: none;
+
+                    @include breakpoint(third-big){
+                        margin: 10px;
+                        color: rgb(145, 145, 145);
+                    }
+
+                    &:hover{
+                        color: rgb(82, 82, 82);
+                    }
+                }
+            }
+        }
+    }
+    // Other projects style start
+
+    .other-project{
+        h1{
+            color: rgb(0, 0, 100);
+            font-size: $bodyH2;
+            font-weight: 700;
+            margin-bottom: 50px;
+
+            &:after{
+                content: "";
+                display: block;
+                position: relative;
+                top: -17px;
+                width: 300px;
+                height: 1px;
+                margin-left: 186px;
+                background-color: var(--workBorder);
+            }
+        }
+    
+    .box-element{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+
+        @include breakpoint(third-big){
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    .box {
+        padding: 20px;
+        background-color: $footer-other-box;
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        box-shadow: 4px 4px 8px rgb(54, 54, 54);
+        transition: 0.35s;
+
+        @include breakpoint(third-big){
+            height: auto;
+        }
+
+        &:hover{
+            transform:scale(1.1);
+        }
+        
+        .link-project{
+            text-align: right;
+            margin-bottom: 20px;
+
+            @include breakpoint(third-big){
+                margin-bottom: 0;
+            }
+
+            a{
+                text-decoration: none;
+                color: rgb(148, 148, 148);
+                font-size: 30px;
+                padding-left: 20px;
+                
+
+                &:hover{
+                    color: rgb(212, 212, 212);
+                }
+            }
+        }
+
+        .project-name{
+            margin-bottom: 10px;
+            h2{
+                color: #fff;
+
+                @include breakpoint(third-big){
+                    font-size: 20px;
+                }
+            }
+        }
+
+        .project-description{
+            margin-bottom: 10px;
+            p {
+                color: rgb(187, 187, 187);
+            }
+        }
+
+        .bottom-tech{
+            margin-bottom: 10px;
+            p{
+                color: rgb(187, 187, 187);
+            }
+        }
+    }
+}
+}
+
+
